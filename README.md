@@ -16,7 +16,7 @@ name - fragment nazwy komputera<br>
 sort - do wyboru NAME/POSTING_DATE, okresla rodzaj sortowania<br>
 <br>
 Wyszukiwanie po dacie<br>
-GET - localhost:8080/api/invoices/{start}/{emd}/{sort} <br>
+GET - localhost:8080/api/invoices/{start}/{end}/{sort} <br>
 start - poczatek zakresu<br>
 end- koniec zakresu<br>
 sort - do wyboru NAME/POSTING_DATE, okresla rodzaj sortowania<br>
