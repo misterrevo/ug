@@ -5,8 +5,8 @@ Aplikacja pozwala takze wyszukiwac komputery po nazwie i dacie ksiegowania.<br>
 
 # Jak uruchomic?
 <br>
-Aby uruchomic projekt, nalezy wejsc w folder <i>target</i> i pobrac plik <i>ug-0.0.1-SNAPSHOTT</i>.<br>
-Nastepenie otwieramy konsole w miesjcu gdzie jest plik i wpisujemy <i>java -jar ug-0.0.1-SNAPSHOT</i>
+Aby uruchomic projekt, nalezy wejsc w folder <i>target</i> i pobrac plik <i>ug-0.0.1-SNAPSHOT.jar</i>.<br>
+Nastepenie otwieramy konsole w miesjcu gdzie jest plik i wpisujemy <i>java -jar ug-0.0.1-SNAPSHOT.jar</i>
 
 # Opis endpointow
 <br>
