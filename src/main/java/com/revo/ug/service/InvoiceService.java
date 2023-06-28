@@ -33,6 +33,7 @@ public class InvoiceService {
     private final NBPClient nbpClient;
     private final ComputerRepository computerRepository;
     private final ComputerMapper computerMapper;
+    private final XMLService xmlService;
 
     public InvoiceResponse findByContainsName(final String name, final Sort sort) {
         log.info("findByContainsName() - name = {}", name);
@@ -87,24 +88,12 @@ public class InvoiceService {
 
         final InvoiceResponse response = new InvoiceResponse(computers);
 
-        saveToXMLFile(response);
+        xmlService.saveToXMLFile(response);
 
         return response;
     }
 
-    private void saveToXMLFile(final InvoiceResponse response) {
-        try {
-            final String uuid = UUID.randomUUID().toString();
-            final XmlMapper xmlMapper = new XmlMapper();
-            final String jarLocation = InvoiceService.class.getProtectionDomain().getCodeSource().getLocation()
-                    .toURI().getPath().toString();
-            xmlMapper.writeValue(new File(jarLocation+uuid+".xml"), response);
-            final File file = new File(jarLocation+uuid+".xml");
-            file.createNewFile();
-        } catch (Exception exception){
-            log.error("saveToXMLFile() - error", exception);
-        }
-    }
+
 
     private ComputerResponse saveAndReturnComputer(final ComputerRequest target, final ExchangeRate exchangeRate, final InvoiceRequest request) {
         final Computer computer = buildComputer(target, exchangeRate, request);
