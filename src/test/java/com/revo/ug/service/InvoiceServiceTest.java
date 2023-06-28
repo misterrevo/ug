@@ -24,6 +24,7 @@ class InvoiceServiceTest {
     private static final String NAME_3 = "komputer 3";
     private static final String DATE_1 = "2023-01-03";
     private static final String DATE_2 = "2023-01-10";
+
     @Autowired
     private InvoiceService underTest;
 
